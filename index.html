@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/logo.png" alt="logo">
+        <div id="all-tags"></div>
+        <button id="new-tag" onclick="tagElements.addTag('', 'new')">Add new tag</button>
+    </header>
+    <div id="container">
+        <div id="posts">
+        </div>
+        <div id="add-new-tag">
+            <span class="close" onclick="this.parentElement.style.display = 'none'">&#10006;</span>
+            <label for="add-tag-input">Enter new tags</label>
+            <p>multiple tags can be entered seperated by commas (,)</p>
+            <input id="add-tag-input" type="text">
+            <button onclick="tagElements.addNewTag()">Add Tags</button>
+        </div>
+        <div id="filtered-list">
+            <span class="close" onclick="this.parentElement.style.display = 'none'">&#10006;</span>
+            <h3>Displaying posts with the tag <span id="filter-tag"></span></h3>
+            <div id="filtered-posts"></div>
+        </div>
+        <button id="submit" onclick="submitChanges()">Save Changes</button>
+    </div>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
